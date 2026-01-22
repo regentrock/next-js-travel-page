@@ -4,7 +4,7 @@ export const places: Place[] = [
   {
     id: 1,
     title: "Balneário Camboriú",
-    image: "/next-js-travel-page/public/images/balneario.webp",
+    image: "./public/images/balneario.webp",
     description: "Conheça as praias da maravilhosa cidade de Balneário Camboriú em Santa Catarina.",
     text: `Balneário Camboriú é um dos destinos mais visitados do sul do Brasil, conhecido por unir o charme urbano com a beleza natural do litoral catarinense. 
     Suas praias encantam tanto quem busca tranquilidade quanto quem prefere agito — a Praia Central é ideal para passeios e atividades esportivas, enquanto a Praia de Laranjeiras oferece águas calmas e um cenário paradisíaco.
