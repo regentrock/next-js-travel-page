@@ -13,7 +13,7 @@ export const places: Place[] = [
   {
     id: 2,
     title: "Paris",
-    image: "/next-js-travel-page/public/images/paris.webp",
+    image: "next-js-travel-page/public/images/paris.webp",
     description: "Visite Paris, a iluminada capital da França — conheça a famosa Torre Eiffel e a culinária local tradicional.",
     text: `Paris, conhecida como a “Cidade Luz”, é um destino que combina arte, história e romance em cada esquina. 
     A Torre Eiffel domina o horizonte e é apenas o começo de uma jornada inesquecível. 
