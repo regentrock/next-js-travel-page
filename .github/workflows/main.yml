@@ -1,0 +1,70 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      pages: write
+      id-token: write
+    
+    steps:
+      # 1. CHECKOUT
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # 2. SETUP NODE
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      # 3. INSTALL
+      - name: Install dependencies
+        run: npm ci
+      
+      # 4. ESLINT (Requisito 1)
+      - name: Run ESLint
+        run: |
+          # Verifica se tem script de lint
+          if npm run 2>/dev/null | grep -q " lint"; then
+            npm run lint
+          else
+            echo "No lint script found, skipping ESLint"
+          fi
+      
+      # 5. BUILD (Requisito 2 - Ordem 1)
+      - name: Build Next.js application
+        run: npm run build
+      
+      # 6. TESTES (Requisito 2 - Ordem 2)
+      - name: Run tests
+        run: |
+          # Verifica se tem script de test
+          if npm run 2>/dev/null | grep -q " test"; then
+            npm run test
+          else
+            echo "No test script found, skipping tests"
+          fi
+      
+      # 7. DEPLOY - GitHub Pages (Requisito 3 - Ordem 3)
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Tenta encontrar a pasta de build automaticamente
+          path: |
+            ./out
+            ./dist
+            ./build
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

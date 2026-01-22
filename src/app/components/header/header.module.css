@@ -1,0 +1,142 @@
+.header {
+  width: 100%;
+  padding: 1.2rem 4rem;
+  background: linear-gradient(to right, #034c36, #003332);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2000;
+  box-sizing: border-box;
+}
+
+.logo {
+  color: #cfeeeb;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 2.4rem;
+  font-size: 1.15rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: aliceblue;
+  transition: color 0.18s ease;
+}
+
+.nav__link:hover {
+  color: #ff812b;
+}
+
+.MenuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  padding: 0.15rem;
+  cursor: pointer;
+  z-index: 2200;
+  align-items: center;
+}
+
+.MenuButton span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.MenuButton.active span:nth-child(1) {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+.MenuButton.active span:nth-child(2) {
+  opacity: 0;
+}
+.MenuButton.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+
+
+@media screen and (max-width: 900px) {
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .MenuButton {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    max-width: 85%;
+    background: linear-gradient(to bottom, #003332, #012926);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4.2rem 1.2rem 1.6rem 1.2rem;
+    gap: 1.4rem;
+    box-shadow: -12px 0 30px rgba(0,0,0,0.45);
+    transform: translateX(110%);
+    transition: transform 0.35s cubic-bezier(.2,.9,.2,1), opacity 0.28s ease;
+    opacity: 0.98;
+    z-index: 2100;
+  }
+
+  .navOpen {
+    transform: translateX(0);
+  }
+
+  .nav__link {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0.4rem;
+    font-size: 1.05rem;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
+    z-index: 1900;
+  }
+  .overlayOpen {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    padding: 0.9rem 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .MenuButton {
+    width: 2.2rem;
+    height: 1.5rem;
+  }
+  .nav {
+    width: 250px;
+  }
+}

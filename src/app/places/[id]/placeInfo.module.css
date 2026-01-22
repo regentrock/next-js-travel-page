@@ -1,0 +1,143 @@
+/* placeInfo.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #BDCDCF;
+  min-height: 100vh;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* A imagem e o conteúdo ficam empilhados no mobile */
+.image {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.content {
+  text-align: center;
+  color: #1c1c1c;
+  background: #BDCDCF;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  transition: all 0.3s ease;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #034C36;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  font-size: 1.15rem;
+  color: #024034;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 1rem;
+  color: #003332;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: justify;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #034C36, #003332);
+  color: #F2E0DF;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 51, 50, 0.3);
+  border: 2px solid transparent;
+}
+
+.backButton:hover {
+  background: linear-gradient(135deg, #024034, #002222);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 51, 50, 0.4);
+  border-color: #E5B8B8;
+}
+
+.notFound {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #003332;
+  font-size: 1.3rem;
+  background-color: #BDCDCF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound h2 {
+  color: #034C36;
+  margin-bottom: 1rem;
+}
+
+.notFound p {
+  color: #024034;
+  margin-bottom: 2rem;
+}
+
+/* ======== DESKTOP MODE ======== */
+@media (min-width: 900px) {
+  .container {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    padding: 4rem 6rem;
+    background-color:  #BDCDCF;
+  }
+
+  .image {
+    flex: 1;
+    max-width: 50%;
+    max-height: none;
+    height: auto;
+    border-radius: 20px 0 0 20px;
+    margin: 0;
+  }
+
+  .content {
+    flex: 1;
+    max-width: none;
+    border-radius: 0 20px 20px 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+  }
+
+  .text {
+    margin: 1.5rem 0;
+  }
+
+  .backButton {
+    align-self: flex-start;
+  }
+}
