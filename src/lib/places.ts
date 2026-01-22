@@ -4,7 +4,7 @@ export const places: Place[] = [
   {
     id: 1,
     title: "Balneário Camboriú",
-    image: "/next-js-travel-page/public/images/balneario.webp/",
+    image: "/next-js-travel-page/public/images/balneario.webp",
     description: "Conheça as praias da maravilhosa cidade de Balneário Camboriú em Santa Catarina.",
     text: `Balneário Camboriú é um dos destinos mais visitados do sul do Brasil, conhecido por unir o charme urbano com a beleza natural do litoral catarinense. 
     Suas praias encantam tanto quem busca tranquilidade quanto quem prefere agito — a Praia Central é ideal para passeios e atividades esportivas, enquanto a Praia de Laranjeiras oferece águas calmas e um cenário paradisíaco.
@@ -13,7 +13,7 @@ export const places: Place[] = [
   {
     id: 2,
     title: "Paris",
-    image: "/next-js-travel-page/public/images//paris.webp",
+    image: "/next-js-travel-page/public/images/paris.webp",
     description: "Visite Paris, a iluminada capital da França — conheça a famosa Torre Eiffel e a culinária local tradicional.",
     text: `Paris, conhecida como a “Cidade Luz”, é um destino que combina arte, história e romance em cada esquina. 
     A Torre Eiffel domina o horizonte e é apenas o começo de uma jornada inesquecível. 
