@@ -4,7 +4,7 @@ export const places: Place[] = [
   {
     id: 1,
     title: "Balneário Camboriú",
-    image: "/next-js-travel-page/images/balneario.webp/",
+    image: "/next-js-travel-page/public/images/balneario.webp/",
     description: "Conheça as praias da maravilhosa cidade de Balneário Camboriú em Santa Catarina.",
     text: `Balneário Camboriú é um dos destinos mais visitados do sul do Brasil, conhecido por unir o charme urbano com a beleza natural do litoral catarinense. 
     Suas praias encantam tanto quem busca tranquilidade quanto quem prefere agito — a Praia Central é ideal para passeios e atividades esportivas, enquanto a Praia de Laranjeiras oferece águas calmas e um cenário paradisíaco.
@@ -13,7 +13,7 @@ export const places: Place[] = [
   {
     id: 2,
     title: "Paris",
-    image: "/next-js-travel-page/images//paris.webp",
+    image: "/next-js-travel-page/public/images//paris.webp",
     description: "Visite Paris, a iluminada capital da França — conheça a famosa Torre Eiffel e a culinária local tradicional.",
     text: `Paris, conhecida como a “Cidade Luz”, é um destino que combina arte, história e romance em cada esquina. 
     A Torre Eiffel domina o horizonte e é apenas o começo de uma jornada inesquecível. 
@@ -23,7 +23,7 @@ export const places: Place[] = [
   {
     id: 3,
     title: "Cidade Velha de Dubrovnik",
-    image: "/next-js-travel-page/images/dubrovnik.webp",
+    image: "/next-js-travel-page/public/images/dubrovnik.webp",
     description: "Explore as muralhas medievais, ruas de pedra e telhados vermelhos da Cidade Velha de Dubrovnik, a 'Pérola do Adriático'.",
     text: `A Cidade Velha de Dubrovnik, na Croácia, é um verdadeiro tesouro histórico banhado pelo Mar Adriático. 
     Cercada por muralhas imponentes do século XVI, ela preserva um charme medieval incomparável. 
@@ -33,7 +33,7 @@ export const places: Place[] = [
   {
     id: 4,
     title: "Rio de Janeiro",
-    image: "/images/rio.webp",
+    image: "/next-js-travel-page/public/images/rio.webp",
     description: "Encante-se com o Cristo Redentor, as praias de Copacabana e o Pão de Açúcar no Rio de Janeiro.",
     text: `O Rio de Janeiro é uma das cidades mais icônicas do mundo, onde natureza e cultura se encontram em perfeita harmonia. 
     O Cristo Redentor, uma das sete maravilhas do mundo moderno, observa a cidade do alto do Corcovado, enquanto as praias de Copacabana e Ipanema vibram com energia e alegria.
@@ -43,7 +43,7 @@ export const places: Place[] = [
   {
     id: 5,
     title: "Tóquio",
-    image: "/next-js-travel-page/images/tokyo.webp",
+    image: "/next-js-travel-page/public/images/tokyo.webp",
     description: "Mergulhe na cultura japonesa em Tóquio — tecnologia, tradição e gastronomia em harmonia perfeita.",
     text: `Tóquio é uma metrópole fascinante que mistura o ultramoderno com o tradicional. 
     Arranha-céus iluminados por neon dividem espaço com templos milenares e jardins silenciosos. 
@@ -54,7 +54,7 @@ export const places: Place[] = [
   {
     id: 6,
     title: "Roma",
-    image: "/next-js-travel-page/images/roma.webp",
+    image: "/next-js-travel-page/public/images/roma.webp",
     description: "Descubra a história milenar de Roma: o Coliseu, o Vaticano e as ruas que respiram arte e passado.",
     text: `Roma é uma viagem no tempo, onde cada rua conta um capítulo da história da humanidade. 
     Conhecida como a “Cidade Eterna”, ela abriga monumentos grandiosos como o Coliseu, o Panteão e o Fórum Romano. 
